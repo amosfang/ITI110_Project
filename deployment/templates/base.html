@@ -1,0 +1,57 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} Land Cover Classification</title>
+    <link rel="stylesheet" href='static/bulma.min.css'>    
+</head>   
+<body> 
+    <nav>
+
+    </nav>  
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <p class="subtitle">
+                    <title>Land Cover Classification</title>
+                    <strong>Team : DataGuru </strong><br />
+                    <p>FANG YAOYANG AMOS (23B712M)</p>
+                    <p>NWAY AUNG (23A061R)</p>
+                    <p>MRIDUL NARAYANAN	(23A468Q)</p>
+                    <p>WEE SONG KWEE (23A068M)</p>	
+                  </p>                
+            </div>
+        </div>
+    </section>           
+    <div class="content">  
+             
+        <div class="columns">
+            <div class="column">
+            </div> 
+            <div class="column">                
+                <h1>Upload Satellite Image</h1>
+                <form method=post enctype=multipart/form-data>
+                <input type=file name=file>
+                <input type=submit value=Upload>
+                </form>                
+            </div> 
+            <div class="column">
+            </div>  
+            <div class="column">
+            </div>                                              
+        </div>
+        <div class="columns">
+            <div class="column">
+            </div>  
+            <div class="column">                
+                {% block content %} {% endblock %}
+                <div class="tile">
+                    {% block results %} {% endblock %}
+                </div>                           
+            </div>    
+            <div class="column">
+            </div>     
+            <div class="column">
+            </div>                                        
+        </div>         
+    </div>       
+</body>

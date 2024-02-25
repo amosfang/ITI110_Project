@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block results %}
+    {% if prediction %}
+    Score Prediction is : <h2>{{ prediction }}</h2>
+    {% endif %} 
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+          <div class="content">
+            <p class="title">Uploaded image</p>
+            <div class="content">
+              <!-- Content -->
+                <figure class="image is-128x128">
+                  <img src="{{ url_for('send_uploaded_file', filename=user_image) }}" alt="Uploaded image"/>
+                </figure>                
+            </div>
+          </div>
+        </article>
+      </div>      
+      <div class="tile is-vertical is-8">
+        {% for myresult in results %}
+        <div class="tile">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p class="title">{{myresult['model'] }}</p>
+              <p class="subtitle"></p>
+              <figure class="image is-4by3">
+                <img src="{{ url_for('send_generated_file', filename=myresult['filename']) }}">
+              </figure>
+            </article>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>    
+    <h2></h2>
+{% endblock %}
+
+{% block mydebug %}
+  <div class="table-container">
+      {% for table in tables %}
+          {{ table|safe }}
+      {% endfor %}
+  </div>
+{% endblock %}
+
+
