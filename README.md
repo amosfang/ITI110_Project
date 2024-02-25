@@ -14,6 +14,7 @@ This project has 3 phases: Part A, B and C.
 * Part B2: U-Net VGG16 U-Net model (done by Mridul)
 * Part B3: U-Net Resnet50 U-Net model (done by Aung)
 * Part B4: U-Net EfficientNet U-Net model (done by Aung)
+* Part C: Deployment (Mridul)
 
 ## Project Summary
 
