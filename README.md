@@ -1,4 +1,4 @@
-# ITI110 Deep Leaning Project
+# ITI110 Deep Learning Project
 
 ## Problem Description
 
